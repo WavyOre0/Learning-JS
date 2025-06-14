@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> 10-exercises</title>
+    <style>
+      body{
+        font-family: Arial;
+      }
+      
+      .Amazon-button{
+        font-size: 15px;
+        background-color: rgb(255, 216, 20);
+        color: black;
+        border: none;
+        padding: 5px 40px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+      }
+
+      .Request-button{
+        border: none;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .Schedule-button{
+        border: none;
+        background-color: rgb(230, 230, 230);
+        padding: 10px 15px;
+        margin-left: 15px;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .move-down{
+        margin-bottom: 10px;
+      }
+      
+      .is-toggled{
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <body>
+      <p>10.a</p>
+      <button class="Amazon-button"> Add to cart</button>
+      <p>10.b</p>
+      <button class="Request-button"> Request now</button> <button class="Schedule-button"> Schedule for later</button>
+      <p>10.c</p>
+      <button class="js-button">Test</button>
+      <p class = "move-down">10.d</p>
+      <button class="Schedule-button not-toggled" onclick="
+        if (!this.classList.contains('is-toggled')) {
+          this.classList.add('is-toggled');
+        } else {
+          this.classList.remove('is-toggled');
+        }
+      ">Gaming</button>
+      <p> 10.e</p>
+      <button class="Schedule-button not-toggled" onclick="
+        On_Off('.Schedule-button not-toggled')
+      ">Gaming</button>
+      <button class="Schedule-button not-toggled" onclick="
+        if (!this.classList.contains('is-toggled')) {
+          this.classList.add('is-toggled');
+        } else {
+          this.classList.remove('is-toggled');
+        }
+      ">Music</button>
+      <button class="Schedule-button not-toggled" onclick="
+        if (!this.classList.contains('is-toggled')) {
+          this.classList.add('is-toggled');
+        } else {
+          this.classList.remove('is-toggled');
+        }
+      ">Tech</button>
+      <script>
+        const mood = document.querySelector('.js-button');
+        console.log(mood.classList.contains('js-button'))
+
+        function On_Off(x) {  
+          const butt = document.querySelector(x)
+          if (!butt.classList.contains('is-toggled')) {
+            butt.classList.add('is-toggled');
+          } else {
+            butt.classList.remove('is-toggled');
+          }
+        }
+      </script>
+    </body>
+  </head>
+</html>

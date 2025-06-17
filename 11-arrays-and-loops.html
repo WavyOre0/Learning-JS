@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>/*
+      const myArray = [10, 
+      20, 
+      30];
+      console.log(myArray);
+
+      console.log(myArray[0]);
+      myArray[0] = 99;
+      console.log(myArray); 
+      [1, 'hello', false, {name: 'socks' }, [1, 2]];
+      console.log(typeof [1,2]);
+      console.log(Array.isArray([1,2]));
+
+      console.log(myArray.length);
+
+      myArray.push(100);
+      console.log(myArray); 
+      myArray.splice(0, 1);
+      console.log(myArray); 
+/*
+      let i = 1;
+      while (i <= 5) {
+        console.log(i);
+        i ++;
+      }
+
+      for (let i = 1; i <= 5; i++){
+        console.log(i);
+      }
+
+      example of non-standard loop 
+      let randomNumber = 0;
+      while(randomNumber < 0.5){
+        randomNumber = Math.random();
+      }
+
+      console.log(randomNumber);
+      */
+      /* practice looping through an array 
+      
+      const todoList = [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ];
+
+      for (let i = 0; index < todoList.length; i ++) {
+        const value = todoList[i]
+        console.log(value);
+      } */
+     /* Accumulator Pattern 
+     1. Creater a variable to store the result.
+     2. Loop throuygh the array and update the result. 
+      const nums = [1, 1, 3];
+      let total = 0;
+
+      for ( let i =0; i <nums.length; i++){
+        const num = nums[i];
+        total += num;
+      }
+      console.log(total);
+
+      
+      let numsCopy = [];
+      for (let i = 0; i < nums.length; i++){
+        const numb = nums[i];
+        numsCopy.push(numb * 2);
+      }
+      console.log(numsCopy);
+      */
+      const array1 = [1, 2, 3];
+      const array2 = array1.slice();
+      array2.push(4);
+      console.log(array1);
+      console.log(array2);
+
+      const array3 = [1, 2, 3];
+      //destructuring shortuct to get values out of an array while saving them to a variable
+      const [firstValue, secondValue, thirdValue] = [1, 2, 3];
+
+      for (let i = 1; i <= 10; i++) {
+        //continue feature of loops skips 1 iteration
+        if (i % 3 === 0) {
+          continue;
+        }
+        console.log(i);
+        //break feature of loops is similar to python
+        if (i === 8) {
+          break;
+        }
+      }
+
+      let i = 1;
+      while ( i <= 10){
+        if (i % 3 === 0){
+          //increment step would be skipped with the continue feature so it must be added before the continue
+          i++;
+          continue;
+        }
+        console.log(i)
+        i++
+      }
+
+      function doubleArray(nums){
+        let numsCopy = [];
+        
+        for (let i = 0; i < nums.length; i++){
+          const numb = nums[i];
+          if (numb === 0){
+            return numsCopy;
+        }
+          numsCopy.push(numb * 2);
+        }
+        return numsCopy;
+    }
+    console.log(doubleArray([1, 1, 3]));
+    console.log(doubleArray([2, 2, 5, 0, 5]));
+    </script>
+  </body>
+</html>

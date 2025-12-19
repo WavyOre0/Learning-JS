@@ -1,6 +1,6 @@
 const todolist = [{
-  name: 'input 1',
-  dueDate:'2022-12-22'
+  name: 'Learn Java',
+  dueDate:'2025-12-19'
 }, {
   name:'input 2',
   dueDate: '2022-12-22'}];
@@ -15,8 +15,9 @@ function renderTodoList(){
     const todoObject = todolist[i];
     //const name = todoObject.name;
     //const dueDate = todoObject.dueDate;
+    //const {name} = todoObject;
     /*example of deconstructing line 16 and 17 to be shorter */
-    const { name, dueDate } = todoObject;
+    const {name, dueDate} = todoObject;
     const html = `
     <div>${name}</div>
     <div>${dueDate}</div>
